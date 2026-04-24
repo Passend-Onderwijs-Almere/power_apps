@@ -1,0 +1,17 @@
+If(
+    Confirm("Weet je zeker dat je dit item wilt verwijderen?");
+    Remove(
+        dekkend_netwerk;
+        ThisItem
+    );;
+    Notify(
+        "Item is verwijderd";
+        NotificationType.Success;
+        1000
+    );
+    Notify(
+        "Geannuleerd";
+        NotificationType.Warning;
+        1000
+    )
+)
