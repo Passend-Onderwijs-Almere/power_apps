@@ -1,3 +1,5 @@
+//Onderstaande code genereert in Power Apps een dialoogvenster met twee keuzes: ja of nee. 
+
 If(
     Confirm("Weet je zeker dat je dit item wilt verwijderen?");
     Remove(
