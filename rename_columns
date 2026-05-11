@@ -1,0 +1,20 @@
+//Onderstaande formule bestaat uit verschillende delen. Het deel waar de gesorteerde tabel als bron wordt gegenereerd voor de Moder Table Control en het deel waar kolomnamen worden hernoemd in de Table Control.
+//Voeg deze formule toe bij de items-eigenschap van de modern table control
+//Voor het effectueren van de vernieuwde kolomnamen kan het nodig zijn een veld eerst te verwijderen uit de table control en vervolgens weer toe te voegen.
+
+RenameColumns(
+    Sort(
+        Filter(
+            dn_toegekende_tarieven;
+            var_reset &&
+            arrangement_zoek.Value = RecordsGallery1.Selected.'Id (ID)'
+        );
+        'Id (ID)';
+        SortOrder.Descending
+    );
+    
+    tarief_naam; Tariefnaam;
+    start; start;
+    eind; eind;
+    schooljaar; Schooljaar
+)
